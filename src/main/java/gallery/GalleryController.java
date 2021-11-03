@@ -58,7 +58,7 @@ public class GalleryController {
 	// 업로드한 이미지 띄운 후에 맞으면 input
 	@RequestMapping("/faceinput")
 	public ModelAndView faceinput() {
-		File f = new File("C:/Users/HOME/Desktop/images/");
+		File f = new File("/usr/mydir/upload/");
 		//File f = new File("C:/kdigital2/images/");
 		String[] namelist = f.list();
 		System.out.println(filename);
