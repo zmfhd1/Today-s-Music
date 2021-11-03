@@ -83,7 +83,7 @@ if (message!="") {
                     <c:choose>
                 	<c:when test="${isLogOn==true and not empty vo}">
                         <li class="nav-item">
-                        <a class="nav-link" href="https://kauth.kakao.com/oauth/authorize?client_id=19b62a13fd7d5958d73872912e2a3c34&redirect_uri=http://localhost:9001/login2&response_type=code"
+                        <a class="nav-link" href="https://kauth.kakao.com/oauth/authorize?client_id=19b62a13fd7d5958d73872912e2a3c34&redirect_uri=http://101.101.211.124:8080//login2&response_type=code"
                          style="color:white">프로필 음악 추천</a>
                          </li>
                 	</c:when>
@@ -158,7 +158,7 @@ if (message!="") {
 					<c:choose>
                 	<c:when test="${isLogOn==true and not empty vo}">
                     
-                        <a class="btn btn-primary btn-xl text-uppercase" href="https://kauth.kakao.com/oauth/authorize?client_id=19b62a13fd7d5958d73872912e2a3c34&redirect_uri=http://localhost:9001/login2&response_type=code"
+                        <a class="btn btn-primary btn-xl text-uppercase" href="https://kauth.kakao.com/oauth/authorize?client_id=19b62a13fd7d5958d73872912e2a3c34&redirect_uri=http://101.101.211.124:8080//login2&response_type=code"
                          style="color:white">프로필 음악 추천받기</a>
                          <br>
                 	</c:when>
