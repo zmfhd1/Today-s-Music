@@ -11,7 +11,7 @@
 </insert>
 
 <select id="selectMusic" parameterType="imageVO" resultType="PmusicVO">
-select * from multimusic 
+select * from music 
 where music_emotion=#{image_emotion} and music_age=#{image_age} and music_gender=#{image_gender}
 </select>
 
@@ -21,7 +21,7 @@ insert into multihistory(image_name, music_num, member_email) values(
 </insert>
 
 <select id="selectMusic2" parameterType="imageVO" resultType="PmusicVO">
-select * from multimusic 
+select * from music 
 where music_emotion=#{image_emotion} and music_age=#{image_age} and music_gender=#{image_gender}
 </select>
 
