@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="qna.QnADAO">
+	<select id="qnaList" resultType="QnAVO">
+		select * from multiqna;
+	</select>
+	
+	<select id="cnt" resultType="int" parameterType="HashMap">
+		select count(qna_code) from multiqna
+		<if test="type!=null">
+			<choose>
+				<when test="type.equals('title')">
+				where qna_subject like concat('%', #{keyword} , '%')
+				</when>
+				<when test="type.equals('content')">
+				where qna_content like concat('%', #{keyword} , '%')
+				</when>
+				<when test="type.equals('writer')">
+				where member_email = #{keyword}
+				</when>						
+			</choose>
+		</if> 
+	</select>
+	
+	<select id="qnaOne" resultType="QnAVO" parameterType="int">
+		select * from multiqna where qna_code = #{code}
+	</select>
+
+	<insert id="insertQnA" parameterType="QnAVO">	
+		insert into multiqna(member_email, qna_subject, qna_content, qna_regdate)
+		values(#{member_email}, #{qna_subject}, #{qna_content}, now())
+	</insert>
+
+	<update id="updateQnA" parameterType="QnAVO">
+		update multiqna set qna_content = #{qna_content},
+		qna_subject = #{qna_subject}
+		where member_email = #{member_email} and qna_code = ${qna_code}
+	</update>
+	
+	<delete id="deleteQnA" parameterType="QnAVO">
+		delete from multiqna where qna_code = #{qna_code}
+	</delete>
+
+	<!-- 검색 후 페이징 처리 -->
+	<select id="listPage" resultType="QnAVO" parameterType="HashMap">
+		select * from multiqna
+		<if test="type!=null">
+			<choose>
+				<when test="type.equals('title')">
+				where qna_subject like concat('%', #{keyword} , '%')
+				</when>
+				<when test="type.equals('content')">
+				where qna_content like concat('%', #{keyword} , '%')
+				</when>
+				<when test="type.equals('writer')">
+				where member_email = #{keyword}
+				</when>						
+			</choose>
+		</if> 
+		order by qna_code desc limit #{displayPost}, #{postNum}	
+	
+	</select>	
+</mapper>
