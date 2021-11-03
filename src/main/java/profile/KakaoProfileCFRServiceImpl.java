@@ -42,7 +42,7 @@ public class KakaoProfileCFRServiceImpl implements KakaoProfileCFRService {
 			StringBuilder sb = new StringBuilder();
 			sb.append("grant_type=authorization_code");
 			sb.append("&client_id=19b62a13fd7d5958d73872912e2a3c34");
-			sb.append("&redirect_uri=http://localhost:9001/login2");
+			sb.append("&redirect_uri=http://101.101.211.124:8080/login2");
 			sb.append("&code=" + code);
 
 			bw.write(sb.toString());
