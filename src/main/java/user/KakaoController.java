@@ -74,7 +74,7 @@ public class KakaoController {
 				"https://kauth.kakao.com/oauth/authorize"
 				//+ "?client_id=9f408ed91ceb3fd32f37ca846fc220f7"
 				+ "?client_id=19b62a13fd7d5958d73872912e2a3c34"
-				+ "&redirect_uri=http://localhost:9001/loginresult"
+				+ "&redirect_uri=http://101.101.211.124:8080//loginresult"
 				+ "&response_type=code";
 		
 		return reqUrl;
