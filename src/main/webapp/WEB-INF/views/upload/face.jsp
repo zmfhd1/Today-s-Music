@@ -141,7 +141,7 @@ for(int i = 0; i< musiclist.size() ;i++){
                             	<br>
                                 <h4 class="subheading">Youtube</h4>
                             </div>
-                            <div class="timeline-body"><iframe width="300" height="150" src= "https://www.youtube.com/embed/<%=murl %>" title="YouTube video player" frameborder="0" 
+                            <div class="timeline-body"><iframe width="300" height="150" src= "https://www.youtube.com/watch?v=/<%=murl %>" title="YouTube video player" frameborder="0" 
 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
                         </div>
                     <!--      <div class="timeline-image"><img class="rounded-circle img-fluid" src="../resources/static/assets/img/kakao1.jpg" alt="..." /></div>-->
