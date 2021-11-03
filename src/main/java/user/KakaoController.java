@@ -165,7 +165,7 @@ public class KakaoController {
             sb.append("grant_type=authorization_code");
             //sb.append("&client_id=9f408ed91ceb3fd32f37ca846fc220f7");  //본인이 발급받은 key
             sb.append("&client_id=19b62a13fd7d5958d73872912e2a3c34");  //본인이 발급받은 key
-            sb.append("&redirect_uri=http://localhost:9001/loginresult");     // 본인이 설정해 놓은 경로
+            sb.append("&redirect_uri=http://101.101.211.124:8080/loginresult");     // 본인이 설정해 놓은 경로
             sb.append("&code=" + authorize_code);
             bw.write(sb.toString());
             bw.flush();
