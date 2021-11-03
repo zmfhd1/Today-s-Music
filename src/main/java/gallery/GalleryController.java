@@ -37,7 +37,7 @@ public class GalleryController {
 	public String uploadResult(@ModelAttribute("vo") UploadVO vo) throws IOException{
 		MultipartFile multi1 = vo.getFile1();
 		String filename1 = multi1.getOriginalFilename();
-		String savePath = "C:/Users/HOME/Desktop/images/";
+		String savePath = "/usr/mydir/upload/";
 		//String savePath = "C:/kdigital2/images/";
 		String ext1 = filename1.substring(filename1.lastIndexOf("."));
 		filename1 = getUuid()+ext1;
