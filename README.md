@@ -22,10 +22,5 @@
 - Mysql
 - [Github](https://github.com/multicampusproject/multi)
 
-## Contribute
 
-- 정연수 - 공지사항, Q&A
-- 우수현 - Kakao login, 히스토리, 회원관리
-- 유서준 - 갤러리 음악 추천
-- 원종호 - 프로필 음악 추천
 
